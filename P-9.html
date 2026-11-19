@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HealthNest - CSS Animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f7;
+            text-align: center;
+        }
+
+        header {
+            background-color: #087f78;
+            color: white;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #064e49;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        /* Text Sliding Effect */
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            background-color: #d1f0e9;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .slider p {
+            color: #087f78;
+            font-size: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+            animation: slideText 8s linear infinite;
+        }
+
+        /* Keyframes Animation */
+        @keyframes slideText {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        h2 {
+            color: #087f78;
+            margin: 25px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Animation Cards */
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+            transition: transform 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #087f78;
+            margin-bottom: 15px;
+        }
+
+        /* Button Animation */
+        button {
+            background-color: #087f78;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        footer {
+            background-color: #064e49;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HealthNest</h1>
+        <p>Preventive Healthcare and Diagnostics</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Sliding Text Animation -->
+    <div class="slider">
+        <p>Welcome to HealthNest - Your Health is Our Priority!</p>
+    </div>
+
+    <h2 id="home">Welcome to HealthNest</h2>
+
+    <p>
+        Take care of your health with regular checkups
+        and preventive healthcare services.
+    </p>
+
+    <!-- Healthcare Services -->
+    <h2 id="services">Our Services</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>Health Checkup</h3>
+            <p>Regular health checkups for early disease detection.</p>
+        </div>
+
+        <div class="card">
+            <h3>Diagnostics</h3>
+            <p>Accurate medical tests for better health monitoring.</p>
+        </div>
+
+        <div class="card">
+            <h3>Consultation</h3>
+            <p>Professional medical advice for a healthy life.</p>
+        </div>
+
+    </div>
+
+    <!-- Animated Button -->
+    <h2>Stay Healthy with HealthNest</h2>
+
+    <button>Explore Services</button>
+
+    <footer id="contact">
+        <p>&copy; 2026 HealthNest. All Rights Reserved.</p>
+        <p>Email: healthnest@gmail.com</p>
+    </footer>
+
+</body>
+
+</html>
